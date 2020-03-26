@@ -1,0 +1,11 @@
+{{--<script src="/themes/infinity-v2/assets/js/app.js"></script>--}}
+<script src="/themes/infinity-v2/assets/js/core.min.js"></script>
+{{--<script src="/themes/infinity-v2/assets/js/fullcalendar.js"></script>--}}
+<script src="/themes/infinity-v2/assets/js/library.js"></script>
+<script src="/themes/infinity-v2/assets/js/plugins.js"></script>
+<script src="/themes/infinity-v2/libs/bower/jquery/dist/jquery.js"></script>
+<script src="/themes/infinity-v2/libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+<script src="/themes/infinity-v2/libs/misc/owl-carousel/owl.carousel.min.js"></script>
+<script src="/themes/infinity-v2/libs/bower/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+<script src="/themes/infinity-v2/libs/bower/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="/themes/infinity-v2/libs/bower/counterup/jquery.counterup.min.js"></script>
