@@ -5,7 +5,7 @@
     <title>@yield('title')</title>
     @include('partials.head.styles')
 </head>
-<body>
+<body class="simple-page">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">

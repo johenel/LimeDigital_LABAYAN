@@ -21,6 +21,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::prefix('ld-admin')->group(function () {
+    Route::get('/list', 'AdminController@listIndex');
+    Route::get('/add', 'AdminController@addIndex');
+    Route::get('/media', 'AdminController@mediaIndex');
+    Route::get('/categories', 'AdminController@categoryIndex');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
