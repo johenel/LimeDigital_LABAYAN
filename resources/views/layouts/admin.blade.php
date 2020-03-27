@@ -38,7 +38,7 @@
         <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: auto;">
             <div class="menubar-scroll-inner" style="overflow: hidden; width: auto; height: auto;">
                 <ul class="app-menu">
-                    <li class="active open">
+                    <li class="active">
                         <a href="/ld-admin/list">
                             <i class="menu-icon zmdi zmdi-view-list-alt zmdi-hc-lg"></i>
                             <span class="menu-text">View All</span>
@@ -66,7 +66,7 @@
                     <li class="" style="padding-left: 20px">
                         <form id="logoutBtnForm" action="/logout" method="post">
                             @csrf
-                            <buttton class="btn btn-default" type="submit" onclick="$('#logoutBtnForm').submit()">
+                            <buttton class="btn btn-default" type="submit" onclick="logout(event)">
                                 <i class="fa fa-power-off" aria-hidden="true"></i>
                                 <span class="menu-text" style="margin-left: 10px">Logout</span>
                             </buttton>
@@ -85,5 +85,34 @@
     </div>
 </div>
 @include('partials.body.scripts')
+@stack('scripts')
+<script type="application/javascript">
+    $(function() {
+        let lsMenuIndex = localStorage.getItem('lsmi');
+        if(lsMenuIndex) {
+            $('.app-menu li').removeClass('active');
+            $('.app-menu li').eq(lsMenuIndex).addClass('active');
+        }
+    });
+
+    $('.app-menu li a').click(function(e) {
+         let menuIndex = $('.app-menu li a').index(this);
+         let lsMenuIndex = localStorage.getItem('lsmi');
+         if(lsMenuIndex) {
+            $('.app-menu li').removeClass('active');
+            $('.app-menu li').eq(lsMenuIndex).addClass('active');
+            localStorage.setItem('lsmi', menuIndex);
+         } else {
+             localStorage.setItem('lsmi', menuIndex);
+         }
+    });
+
+    function logout(e) {
+        e.preventDefault();
+        localStorage.removeItem('lsmi');
+        $('#logoutBtnForm').submit();
+    }
+
+</script>
 </body>
 </html>
