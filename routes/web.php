@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    if(\Illuminate\Support\Facades\Auth::user()) {
+       return redirect('/ld-admin/list');
+    }
     return view('pages.welcome');
 });
 
