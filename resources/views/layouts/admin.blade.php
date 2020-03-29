@@ -5,7 +5,7 @@
     <title>@yield('title')</title>
     @include('partials.head.styles')
 </head>
-<body class="menubar-left menubar-unfold  theme-primary menubar-light pace-done">
+<body class="menubar-left menubar-unfold  theme-primary menubar-light pace-done" style="overflow: auto">
 <div class="pace  pace-inactive">
     <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
         <div class="pace-progress-inner"></div>
