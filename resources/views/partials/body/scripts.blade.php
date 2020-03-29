@@ -16,3 +16,5 @@
 <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="application/javascript"></script>
 {{--Sweet Alert--}}
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js"></script>
+{{--TinyMCE Rich Text Editor--}}
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>

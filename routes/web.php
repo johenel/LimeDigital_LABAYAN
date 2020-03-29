@@ -22,12 +22,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::prefix('ld-admin')->group(function () {
     Route::get('/list', 'AdminController@listIndex');
     Route::get('/add', 'AdminController@addIndex');
     Route::get('/media', 'AdminController@mediaIndex');
     Route::get('/categories', 'AdminController@categoryIndex');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/{slug1}', 'PageController@index');
+Route::get('/{slug1}/{slug2}', 'PageController@index');
+
+
 

@@ -36,4 +36,11 @@ Route::prefix('v1')->group(function() {
     Route::post('/media-files', 'Api\V1\MediaFileController@create');
     Route::patch('/media-files/{id}', 'Api\V1\MediaFileController@update');
     Route::delete('/media-files/{id}', 'Api\V1\MediaFileController@delete');
+
+    // POST
+    Route::get('/posts', 'Api\V1\PostController@list');
+    Route::get('/posts/{id}', 'Api\V1\PostController@item');
+    Route::post('/posts', 'Api\V1\PostController@create');
+    Route::patch('/posts/{id}', 'Api\V1\PostController@update');
+    Route::delete('/posts/{id}', 'Api\V1\PostController@delete');
 });

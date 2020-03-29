@@ -1,6 +1,8 @@
 {
     "/js/admin-category.js": "/js/admin-category.js",
     "/js/admin-media.js": "/js/admin-media.js",
+    "/js/admin-post.js": "/js/admin-post.js",
+    "/js/admin-post-all.js": "/js/admin-post-all.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css"
 }
